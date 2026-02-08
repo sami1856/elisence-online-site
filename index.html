@@ -8,39 +8,42 @@
 
   <!-- SEO -->
   <meta name="robots" content="index, follow" />
+  <!-- Canonical still points to main Elisence identity -->
   <link rel="canonical" href="https://www.elisence.com/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Elisence Online – Official Digital Health Gateway" />
-  <meta property="og:description" content="Official global hub for the Elisence ecosystem. Connect to Elisence.com, UK microsite, articles, and verified social channels." />
+  <meta property="og:description" content="Official global hub for the Elisence ecosystem. Connect to Elisence.com, UK microsite, founder articles and verified social channels." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.elisence.online" />
+  <meta property="og:url" content="https://www.elisence.online/" />
   <meta property="og:site_name" content="Elisence Online" />
 
   <style>
-    /* --------- THEME --------- */
     :root {
       --blue: #38bdf8;
       --blue-soft: rgba(56, 189, 248, 0.14);
       --text: #e2e8f0;
       --text-soft: #94a3b8;
       --bg-dark: #020617;
-      --glass: rgba(255, 255, 255, 0.04);
-      --border: rgba(255, 255, 255, 0.12);
+      --glass: rgba(15, 23, 42, 0.86);
+      --border: rgba(148, 163, 184, 0.45);
       --radius: 18px;
       --pill: 999px;
-      --shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.9);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at 20% 0%, #0ea5e9, #020617 55%, #000);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.35), transparent 55%),
+        radial-gradient(circle at 80% 100%, rgba(37, 99, 235, 0.45), transparent 60%),
+        var(--bg-dark);
       color: var(--text);
       min-height: 100vh;
       padding: 40px 16px;
@@ -51,25 +54,25 @@
 
     .shell {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1120px;
       background: var(--glass);
       backdrop-filter: blur(22px);
-      border: 1px solid var(--border);
+      border: 1px solid rgba(15, 23, 42, 0.95);
       border-radius: 30px;
-      padding: 32px;
+      padding: 30px 26px 28px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
     }
 
-    /* glowing orbs */
     .shell::before {
       content: "";
       position: absolute;
-      inset: -150px;
+      inset: -180px;
       background:
-        radial-gradient(circle at 10% 5%, rgba(56,189,248,0.20), transparent 60%),
-        radial-gradient(circle at 90% 10%, rgba(59,130,246,0.22), transparent 60%);
+        radial-gradient(circle at 10% 0%, rgba(56,189,248,0.22), transparent 60%),
+        radial-gradient(circle at 90% 20%, rgba(59,130,246,0.26), transparent 60%);
+      opacity: 0.9;
       pointer-events: none;
     }
 
@@ -78,21 +81,22 @@
       z-index: 5;
     }
 
+    /* HEADER */
     .badge-row {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .badge {
       padding: 6px 14px;
-      background: rgba(15,23,42,0.7);
+      background: rgba(15,23,42,0.9);
       border: 1px solid var(--border);
       color: var(--text-soft);
       border-radius: var(--pill);
       font-size: 11px;
-      letter-spacing: .05em;
+      letter-spacing: .06em;
       text-transform: uppercase;
       backdrop-filter: blur(10px);
     }
@@ -104,48 +108,91 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .subtext {
       font-size: 15px;
-      max-width: 650px;
+      max-width: 720px;
       color: var(--text-soft);
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }
 
     .buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     .btn {
-      padding: 10px 18px;
+      padding: 9px 18px;
       text-decoration: none;
       color: var(--text);
       border: 1px solid var(--border);
       border-radius: var(--pill);
-      background: rgba(15,23,42,0.75);
-      backdrop-filter: blur(12px);
+      background:
+        radial-gradient(circle at top, rgba(56,189,248,0.18), rgba(15,23,42,0.96));
+      backdrop-filter: blur(14px);
       font-size: 14px;
-      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: 0.18s ease;
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,1),
+        0 14px 40px rgba(15,23,42,0.95);
     }
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 35px rgba(56,189,248,0.35);
-      border-color: var(--blue);
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,1),
+        0 16px 46px rgba(37, 99, 235, 0.85),
+        0 0 24px rgba(56,189,248,0.7);
+      border-color: rgba(56,189,248,0.85);
+    }
+
+    .btn-primary {
+      background:
+        radial-gradient(circle at top, rgba(59,130,246,0.92), rgba(37,99,235,0.98));
+      border-color: rgba(56,189,248,0.9);
+    }
+
+    /* CARDS */
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.4fr);
+      gap: 18px;
+      margin-bottom: 22px;
+      align-items: flex-start;
     }
 
     .card {
-      background: rgba(15,23,42,0.75);
+      position: relative;
+      background: rgba(15,23,42,0.96);
       border-radius: var(--radius);
       border: 1px solid var(--border);
-      padding: 22px;
-      margin-bottom: 20px;
-      backdrop-filter: blur(12px);
+      padding: 20px 20px 18px;
+      backdrop-filter: blur(16px);
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,1),
+        0 20px 55px rgba(15,23,42,1);
+      margin-bottom: 18px;
+    }
+
+    /* نور آبی زیر باکس */
+    .card::after {
+      content: "";
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      bottom: -10px;
+      height: 18px;
+      background: radial-gradient(circle at 50% 0, rgba(56,189,248,0.7), transparent 70%);
+      opacity: 0.9;
+      filter: blur(6px);
+      pointer-events: none;
     }
 
     .card-title {
@@ -160,12 +207,13 @@
       margin-bottom: 10px;
     }
 
-    ul {
+    .card ul {
       list-style: none;
-      margin-left: 5px;
+      margin-left: 4px;
+      margin-bottom: 8px;
     }
 
-    li {
+    .card li {
       color: var(--text-soft);
       margin-bottom: 6px;
       font-size: 13px;
@@ -173,16 +221,57 @@
       padding-left: 12px;
     }
 
-    li::before {
+    .card li::before {
       content: "•";
       color: var(--blue);
       position: absolute;
       left: 0;
-      top: 2px;
+      top: 1px;
+    }
+
+    .link-row {
+      margin-top: 4px;
+      font-size: 13px;
+    }
+
+    .link-row a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .link-row a:hover {
+      text-decoration: underline;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .article-tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.5);
+      font-size: 11px;
+      color: var(--text-soft);
+      margin-bottom: 6px;
+    }
+
+    .article-link {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .article-link:hover {
+      text-decoration: underline;
     }
 
     footer {
-      margin-top: 25px;
+      margin-top: 26px;
       font-size: 12px;
       color: var(--text-soft);
       text-align: center;
@@ -195,6 +284,15 @@
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .shell {
+        padding: 24px 18px 22px;
+      }
+      .columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
   </style>
 </head>
@@ -212,59 +310,217 @@
       <h1>Elisence Online</h1>
 
       <p class="subtext">
-        This is the official global gateway for all Elisence platforms created by
+        This online hub connects all Elisence platforms created by
         <strong>Saami (Sami) Salami Asl</strong>.  
-        A clean, safe, sovereign digital health ecosystem — fully non-diagnostic, privacy-first, and designed for
-        ministries, clinicians, and families.
+        It exists so that anyone who searches for <strong>Saami Salami</strong>,
+        <strong>Sami Salami</strong> or <strong>Saami Salami Asl</strong> can land on calm, official,
+        non-dramatic information that explains his long-term digital health work.
       </p>
 
-      <!-- BUTTONS -->
+      <!-- MAIN BUTTONS -->
       <div class="buttons">
-        <a class="btn" href="https://www.elisence.com/" target="_blank">🌍 Elisence.com (Main Platform)</a>
-        <a class="btn" href="https://www.elisence.co.uk/" target="_blank">🇬🇧 UK Microsite</a>
-        <a class="btn" href="https://www.youtube.com/@Elisence_saami_salami_as" target="_blank">🎥 YouTube</a>
-        <a class="btn" href="https://www.instagram.com/elisence.ai" target="_blank">📸 Instagram</a>
-        <a class="btn" href="https://www.tiktok.com/@elisence.official" target="_blank">🎵 TikTok</a>
+        <a class="btn btn-primary" href="https://www.elisence.com/" target="_blank" rel="noopener">
+          🌍 Elisence.com (Main Platform)
+        </a>
+        <a class="btn" href="https://www.elisence.co.uk/" target="_blank" rel="noopener">
+          🇬🇧 Elisence UK Microsite
+        </a>
+        <a class="btn" href="https://www.youtube.com/@Elisence_saami_salami_as" target="_blank" rel="noopener">
+          🎥 Founder & Phase Videos
+        </a>
+        <a class="btn" href="https://www.instagram.com/elisence.ai" target="_blank" rel="noopener">
+          📸 Instagram
+        </a>
+        <a class="btn" href="https://www.tiktok.com/@elisence.official" target="_blank" rel="noopener">
+          🎵 TikTok
+        </a>
       </div>
 
-      <!-- CARD 1 -->
-      <div class="card">
-        <div class="card-title">Why this Online Hub Exists</div>
-        <p>
-          To give Google a clean, official, accurate reference when someone searches for:
-        </p>
-        <ul>
-          <li>Saami Salami</li>
-          <li>Sami Salami</li>
-          <li>Saami Salami Asl</li>
-        </ul>
-        <p>
-          Instead of old or out-of-context pages, this hub directs people to verified Elisence sources only.
-        </p>
+      <!-- TOP TWO CARDS -->
+      <div class="columns">
+        <section class="card">
+          <div class="card-title">Why this Online Hub Exists</div>
+          <p>
+            Search engines sometimes show an old, incomplete or out-of-context story when a person is searched.
+            This hub gives a clear, official reference for:
+          </p>
+          <ul>
+            <li>Saami Salami</li>
+            <li>Sami Salami</li>
+            <li>Saami Salami Asl</li>
+          </ul>
+          <p>
+            Instead of random links, the pages here point only to verified Elisence material and calm explanations.
+          </p>
+        </section>
+
+        <section class="card">
+          <div class="card-title">About Elisence</div>
+          <p>
+            Elisence is a multi-phase digital health & humanity platform: GLP-1 and metabolic engines, Women+ health,
+            mental health & dopamine balance, nutrition, air-quality intelligence, and long-term risk pathways.
+          </p>
+          <ul>
+            <li>Aligned with NHS, FDA, EU MDR, GCC expectations</li>
+            <li>Non-diagnostic, non-prescriptive safety boundaries</li>
+            <li>Zero-trust architecture and K-anonymity for populations</li>
+            <li>Evidence-pack mindset: explainable, regulator-friendly</li>
+          </ul>
+        </section>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="card">
-        <div class="card-title">About Elisence</div>
+      <!-- ARTICLES SECTION -->
+      <section class="card">
+        <div class="card-title">Founder Articles about Saami / Sami Salami</div>
         <p>
-          A multi-phase digital health ecosystem covering GLP-1 intelligence, Women+ health, nutrition, risk pathways,
-          mental health, dopamine balance, air-quality intelligence, and more.
+          The following official articles explain how <strong>Saami (Sami) Salami</strong> works with regulators,
+          safety methods and courts. Each page is written in the same calm, structured style and can be shared with
+          clinicians, ministries or legal teams.
         </p>
-        <ul>
-          <li>Aligned with NHS, FDA, EU MDR, GCC expectations</li>
-          <li>Non-diagnostic safety boundaries</li>
-          <li>Zero-trust & K-anonymity architecture</li>
-          <li>Evidence-pack based (not medical advice)</li>
-        </ul>
-      </div>
+
+        <div class="articles-grid">
+          <!-- NHS -->
+          <article>
+            <div class="article-tag">NHS & UK Digital Health</div>
+            <p>
+              How Saami / Sami Salami aligns Elisence with NHS clinical safety expectations, zero-diagnosis boundaries
+              and transparent evidence packs.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="nhs-saami-salami.html">
+                nhs-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- FDA -->
+          <article>
+            <div class="article-tag">FDA & US Perspective</div>
+            <p>
+              Describes Saami’s approach to US-style FDA expectations, CDS boundaries and why Elisence is built as a
+              decision-support data backbone, not a replacement for clinicians.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="fda-saami-salami.html">
+                fda-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- EU MDR -->
+          <article>
+            <div class="article-tag">EU MDR Digital Health</div>
+            <p>
+              Shows how Elisence is architected so that Europeans reading about Saami Salami see a founder who respects
+              classification rules, risk management and MDR-style governance.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="eu-mdr-saami-salami.html">
+                eu-mdr-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- GCC / PDPL -->
+          <article>
+            <div class="article-tag">GCC & PDPL</div>
+            <p>
+              Focuses on Gulf region privacy (PDPL) and how Saami Salami designs Elisence so that ministries in Qatar,
+              Saudi and neighbours can trust cross-border data handling.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="gcc-pdpl-saami-salami.html">
+                gcc-pdpl-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- MDR (regulator-grade overview) -->
+          <article>
+            <div class="article-tag">Medical Device Mindset</div>
+            <p>
+              Explains Saami’s personal stance on “medical-device thinking” – cautious, stepwise and always
+              non-diagnostic unless a regulator explicitly approves escalation.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="mdr-saami-salami.html">
+                mdr-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- BBVP -->
+          <article>
+            <div class="article-tag">BBVP Methodology</div>
+            <p>
+              Outlines the Build-Back-Verify-Prove (BBVP) discipline that Saami uses to avoid hype and to treat every
+              Elisence feature as if one day it will be examined in court.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="bbvp-saami-salami.html">
+                bbvp-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- Zero Trust – general -->
+          <article>
+            <div class="article-tag">Zero-Trust Security</div>
+            <p>
+              A clear, non-technical explanation of how Saami / Sami Salami applies zero-trust security patterns around
+              identities, access and health-data handling.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="zero-trust-sami-salami.html">
+                zero-trust-sami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- Zero Trust + BBVP combo -->
+          <article>
+            <div class="article-tag">Zero-Trust + BBVP</div>
+            <p>
+              Connects zero-trust security with the BBVP discipline so that any future regulator can see exactly
+              how Saami designed Elisence to fail safe, not fail noisy.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="zero-trust-bbvp-saami-salami.html">
+                zero-trust-bbvp-saami-salami.html
+              </a>
+            </div>
+          </article>
+
+          <!-- Court & Evidence -->
+          <article>
+            <div class="article-tag">Court & Evidence Profile</div>
+            <p>
+              A dedicated article for judges, social workers and lawyers, explaining Saami’s evidence-based mindset and
+              why Elisence is built as if every log might one day be inspected.
+            </p>
+            <div class="link-row">
+              <a class="article-link" href="court-evidence-saami-salami.html">
+                court-evidence-saami-salami.html
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="link-row" style="margin-top:14px;">
+          For a deeper narrative about Saami / Sami Salami’s journey and the full Elisence roadmap, please use the
+          main founder page on the global site:
+          <a href="https://www.elisence.com/founder-saami.html" target="_blank" rel="noopener">
+            https://www.elisence.com/founder-saami.html
+          </a>.
+        </p>
+      </section>
 
       <footer>
-        © 2026 Elisence · Official Global Health & Humanity Platform  
+        © 2026 Elisence · Official Online Hub for Saami / Sami Salami  
         <br />
-        <a href="https://www.elisence.com/">elisence.com</a> ·
-        <a href="https://www.elisence.co.uk/">elisence.co.uk</a>
+        <a href="https://www.elisence.com/" target="_blank" rel="noopener">elisence.com</a> ·
+        <a href="https://www.elisence.co.uk/" target="_blank" rel="noopener">elisence.co.uk</a>
       </footer>
-
     </div>
   </main>
 </body>
