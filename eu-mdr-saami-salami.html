@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EU MDR & Safety-by-Design – How Saami (Sami) Salami Shapes Elisence</title>
+  <meta name="description" content="How Saami (Sami) Salami thinks about EU MDR, risk and safety-by-design when building Elisence. A structured article for ministries, regulators, courts and families who want a fuller picture beyond search snippets.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical: main identity stays on elisence.com -->
+  <link rel="canonical" href="https://www.elisence.com/articles.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EU MDR & Safety-by-Design – How Saami (Sami) Salami Shapes Elisence">
+  <meta property="og:description" content="A calm explanation of how Saami (Sami) Salami approaches EU MDR-style thinking, risk and safety in Elisence, beyond rumours or fragments online.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/eu-mdr-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- Organization JSON-LD (simple, consistent) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elisence",
+    "url": "https://www.elisence.com",
+    "logo": "https://www.elisence.com/assets/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Saami Salami"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+                  radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+                  #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .article-panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .article-panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .article-panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .article-panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .article-panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .article-panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>EU MDR • Safety-by-Design</span>
+      </div>
+      <h1>EU MDR & Safety-by-Design – How Saami (Sami) Salami Shapes Elisence</h1>
+      <p class="hero-sub">
+        This article describes how <strong>Saami Salami</strong> — also written as <strong>Sami Salami</strong> —
+        thinks about EU MDR-style safety and risk when building Elisence. It is written for ministries, regulators,
+        courts and families who want to understand his professional mindset, not just short search results.
+      </p>
+
+      <article class="article-panel">
+        <h2>1. Elisence is not a medical device today – but safety thinking starts early</h2>
+        <p>
+          Elisence is designed as a <strong>non-diagnostic, non-prescriptive</strong> health intelligence ecosystem.
+          That means it does not currently act as a full medical device under EU MDR. However, Saami / Sami Salami
+          chooses to bring <strong>MDR-style safety thinking</strong> into the architecture from the beginning.
+        </p>
+        <p>
+          The logic is simple: if the platform ever supports regulated pathways in the future, it is better to build
+          with those expectations in mind now, rather than trying to retrofit safety later.
+        </p>
+
+        <h3>2. Risk thinking: what could go wrong for a real person?</h3>
+        <p>
+          Safety-by-design starts with basic questions such as:
+        </p>
+        <ul>
+          <li>What if a user misunderstands a chart or message?</li>
+          <li>What if a metric fails to refresh and shows old data?</li>
+          <li>What if an integration mislabels a health event?</li>
+          <li>What happens if a feature is used outside its intended scope?</li>
+        </ul>
+        <p>
+          For Saami Salami, these questions are not academic. They are used to shape how each feature looks, what
+          warnings it shows and which roles are allowed to see or act on sensitive information.
+        </p>
+
+        <h3>3. Non-diagnostic posture, on purpose</h3>
+        <p>
+          One of the most important design decisions is to keep Elisence firmly
+          <strong>non-diagnostic and non-prescriptive</strong>. That means:
+        </p>
+        <ul>
+          <li>No direct instructions such as “start/stop/change this medicine”.</li>
+          <li>No claims that a chart or score is a diagnosis.</li>
+          <li>Encouraging users to speak with doctors, not replace them.</li>
+          <li>Using language that explains patterns instead of making clinical decisions.</li>
+        </ul>
+        <p>
+          This posture is central to how Saami / Sami Salami communicates about the platform and how he designs
+          user-facing content.
+        </p>
+
+        <h3>4. Traceability and evidence – not marketing stories</h3>
+        <p>
+          A key part of EU MDR thinking is traceability: being able to show which requirement led to which feature
+          and what evidence supports it. In Elisence, that spirit appears in the way features are documented:
+        </p>
+        <ul>
+          <li>Each phase has a clear scope and non-diagnostic intent.</li>
+          <li>Safety and data-protection notes are written for engines and modules.</li>
+          <li>Evidence packs and test logs are collected for critical endpoints.</li>
+          <li>Important changes are recorded, not just “pushed to production”.</li>
+        </ul>
+        <p>
+          This reflects how Saami Salami prefers to work: “prove it, don’t just say it”.
+        </p>
+
+        <h3>5. Feature flags and OFF=SAFE behaviour</h3>
+        <p>
+          Safety is not only about what happens when a feature is ON. It is also about what happens when it is OFF.
+          Under the approach led by Saami / Sami Salami, sensitive modules are designed so that:
+        </p>
+        <ul>
+          <li>When the feature flag is OFF, they return safe status codes (such as 503) instead of partial data.</li>
+          <li>They do not quietly leak experimental content to real users.</li>
+          <li>Both ON and OFF states are tested and documented.</li>
+          <li>New regions can be onboarded gradually under ministry oversight.</li>
+        </ul>
+        <p>
+          This pattern is more work in the short term, but it reduces future risk.
+        </p>
+
+        <h3>6. Why this matters when someone searches “Saami Salami / Sami Salami”</h3>
+        <p>
+          Online search often compresses a person’s work into a few dramatic lines. Someone looking up
+          <strong>“Saami Salami”</strong> or <strong>“Sami Salami”</strong> may see conflict or allegations
+          without seeing the care that goes into his long-term projects.
+        </p>
+        <p>
+          This article exists to show that:
+        </p>
+        <ul>
+          <li>He treats health-related technology as a serious responsibility.</li>
+          <li>He brings MDR-style thinking into Elisence, even when not legally required.</li>
+          <li>He prefers transparent, evidence-based progress over shortcuts.</li>
+          <li>He aims to align with European and international expectations on safety.</li>
+        </ul>
+
+        <h3>7. Where to see the rest of the picture</h3>
+        <p>
+          To understand more about how Saami (Sami) Salami works on digital health, you can visit:
+        </p>
+        <ul>
+          <li>
+            Founder profile:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            Evidence and articles hub:
+            <a href="https://www.elisence.com/articles.html" rel="noopener">
+              https://www.elisence.com/articles.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page is not regulatory advice and does not claim Elisence is a certified medical device.
+          Its purpose is to describe how Saami (Sami) Salami thinks about EU MDR-style safety and
+          safety-by-design in his own work, so that ministries, regulators, courts and families can see a calm,
+          structured description alongside any other search results they may encounter.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – EU MDR & Safety-by-Design
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
