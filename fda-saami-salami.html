@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FDA Clinical Decision Support & Saami Salami – Elisence Online</title>
+  <meta name="description" content="How Saami (Sami) Salami designs non-diagnostic, FDA-aligned digital health systems. A calm, professional profile for readers who want a clear view beyond fragmented search results.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical: main identity stays on elisence.com -->
+  <link rel="canonical" href="https://www.elisence.com/articles.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FDA Clinical Decision Support & Saami Salami – Elisence Online">
+  <meta property="og:description" content="A clear explanation of how Saami (Sami) Salami respects FDA Clinical Decision Support boundaries in his work.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/fda-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- Organization JSON-LD (simple, consistent) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elisence",
+    "url": "https://www.elisence.com",
+    "logo": "https://www.elisence.com/assets/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Saami Salami"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+                  radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+                  #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .article-panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .article-panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .article-panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .article-panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .article-panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .article-panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>FDA CDS boundaries • Founder profile</span>
+      </div>
+      <h1>FDA Clinical Decision Support & The Work of Saami (Sami) Salami</h1>
+      <p class="hero-sub">
+        This article explains, in clear and neutral language, how <strong>Saami Salami</strong> — also written
+        as <strong>Sami Salami</strong> — approaches FDA Clinical Decision Support (CDS) boundaries in his work.
+        It is designed for readers who prefer evidence and structure over rumours or isolated search results.
+      </p>
+
+      <article class="article-panel">
+        <h2>1. Why FDA Clinical Decision Support matters</h2>
+        <p>
+          In the United States, the FDA has introduced rules for Clinical Decision Support (CDS) systems. These
+          rules make a clear distinction between tools that:
+        </p>
+        <ul>
+          <li>Simply help people and clinicians understand health information, and</li>
+          <li>Tools that actively diagnose, prescribe or replace the judgement of a healthcare professional.</li>
+        </ul>
+        <p>
+          The work led by Saami (Sami) Salami is deliberately built on the safe side of these boundaries. The goal
+          is not to create an “automatic doctor”, but to build structured, explainable wellness intelligence that
+          always keeps human clinicians in control.
+        </p>
+
+        <h3>2. The core principle: non-diagnostic by design</h3>
+        <p>
+          Every serious project that Saami Salami has led in digital health starts with one simple rule:
+          <strong>no diagnosis, no prescription, no replacement of clinicians</strong>. Instead, the systems are
+          designed to:
+        </p>
+        <ul>
+          <li>Organise data points (e.g. weight, sleep, symptoms) into clear trends.</li>
+          <li>Show what questions a person might want to raise with their doctor.</li>
+          <li>Highlight risk patterns in a way that is clearly explainable and reversible.</li>
+          <li>Keep the language strictly informational, not directive.</li>
+        </ul>
+        <p>
+          This is fully in line with FDA CDS expectations, which allow certain software to remain outside
+          the definition of a regulated medical device when it is clearly non-diagnostic and does not dictate
+          a clinical decision.
+        </p>
+
+        <h3>3. How Saami / Sami Salami applies FDA-aligned boundaries in practice</h3>
+        <p>
+          For readers who encounter his name online, it is important to see patterns, not just fragments.
+          In practice, Saami / Sami Salami applies FDA-aligned boundaries in at least four ways:
+        </p>
+        <ul>
+          <li>
+            <strong>Transparent logic:</strong> The reasoning of the system is described in plain language.
+            A clinician should be able to read the logic and understand exactly how a suggestion is produced.
+          </li>
+          <li>
+            <strong>Human override:</strong> The final choice always belongs to the person and their clinician.
+            The system never claims that its output must be followed.
+          </li>
+          <li>
+            <strong>Explainable signals:</strong> Outputs are presented as “signals” or “patterns”, not 
+            as definitive diagnoses. Users are invited to discuss them with a professional.
+          </li>
+          <li>
+            <strong>Feature flags:</strong> Sensitive features can be fully disabled at any time while
+            keeping the platform safe and stable.
+          </li>
+        </ul>
+
+        <h3>4. Evidence, logs and traceability</h3>
+        <p>
+          A key part of FDA-oriented thinking is the ability to reconstruct what a system did at any point in time.
+          Under the leadership of Saami Salami, every serious deployment follows an evidence-first approach:
+        </p>
+        <ul>
+          <li>Inputs, outputs and important events are logged with timestamps.</li>
+          <li>System versions are tracked, so it is always clear which logic was active.</li>
+          <li>Risk assessments and design decisions are documented, not left in private chats.</li>
+          <li>When needed, complete audit trails can be exported for legal or regulatory review.</li>
+        </ul>
+        <p>
+          This is not simply about compliance. It is about respect: respect for patients, clinicians and
+          any regulator who might one day need to examine how a feature behaved in reality.
+        </p>
+
+        <h3>5. Why this article exists for searches on “Saami Salami” / “Sami Salami”</h3>
+        <p>
+          Search engines sometimes highlight conflict, accusations or incomplete snapshots before they surface
+          the long-term, disciplined work of a person. This page exists to correct that imbalance for anyone
+          who searches for <strong>“Saami Salami”</strong> or <strong>“Sami Salami”</strong> and wants to know
+          how he actually works when it comes to FDA-related standards.
+        </p>
+        <p>
+          The key points are:
+        </p>
+        <ul>
+          <li>He builds systems that stay non-diagnostic by design.</li>
+          <li>He keeps clinicians and official services at the centre of decisions.</li>
+          <li>He insists on evidence, logs and transparent logic.</li>
+          <li>He chooses careful, regulator-aware design over shortcuts or hype.</li>
+        </ul>
+
+        <h3>6. Connection to other frameworks (NHS, EU, GCC)</h3>
+        <p>
+          Although this article focuses on FDA CDS, the same attitude is visible in how Saami / Sami Salami
+          works with other frameworks such as NHS digital safety, EU MDR and GCC privacy rules. The pattern
+          is consistent:
+        </p>
+        <ul>
+          <li>Clear safety boundaries.</li>
+          <li>Non-diagnostic positioning.</li>
+          <li>Documented evidence and traceability.</li>
+        </ul>
+        <p>
+          This consistency is important for courts, ministries and institutions that may be reviewing
+          his work across multiple jurisdictions.
+        </p>
+
+        <h3>7. Where to read more about Saami / Sami Salami</h3>
+        <p>
+          This article is one piece of a broader effort to ensure that search results reflect the real,
+          long-term work of Saami (Sami) Salami, not only isolated references. For deeper context, readers
+          can explore:
+        </p>
+        <ul>
+          <li>
+            Founder profile:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            Evidence and articles hub:
+            <a href="https://www.elisence.com/articles.html" rel="noopener">
+              https://www.elisence.com/articles.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page does not offer medical advice, diagnosis or treatment. It exists to document how
+          Saami (Sami) Salami approaches FDA Clinical Decision Support boundaries, so that future readers
+          — including courts, regulators and families — can see a balanced, structured account of his
+          professional conduct.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – FDA CDS Profile
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
