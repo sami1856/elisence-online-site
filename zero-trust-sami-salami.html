@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zero-Trust Security – How Saami (Sami) Salami Protects Elisence</title>
+  <meta name="description" content="How Saami (Sami) Salami applies Zero-Trust security principles in Elisence to protect families, ministries and clinical partners, and why this matters when people search his name online.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.elisence.com/articles.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zero-Trust Security – How Saami (Sami) Salami Protects Elisence">
+  <meta property="og:description" content="A calm, structured explanation of how Saami (Sami) Salami uses Zero-Trust security to design Elisence for ministries, regulators and families.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/zero-trust-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saami Salami",
+    "url": "https://www.elisence.com/founder-saami.html",
+    "jobTitle": "Founder of Elisence",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Elisence"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background:
+        radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+        radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+        #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Zero-Trust • Security Posture</span>
+      </div>
+      <h1>Zero-Trust Security – How Saami (Sami) Salami Protects Elisence</h1>
+      <p class="hero-sub">
+        This article explains how <strong>Saami Salami</strong> — also written as <strong>Sami Salami</strong> —
+        applies <strong>Zero-Trust security</strong> principles in Elisence, and why this matters when ministries,
+        regulators, courts and families search his name online.
+      </p>
+
+      <section class="panel">
+        <h2>1. What Zero-Trust really means in Elisence</h2>
+        <p>
+          Zero-Trust is not just a slogan. It means that Elisence is designed on the assumption that:
+        </p>
+        <ul>
+          <li>No network is automatically safe.</li>
+          <li>No device is automatically safe.</li>
+          <li>No account is automatically trusted, even if it is “inside”.</li>
+        </ul>
+        <p>
+          For Saami / Sami Salami, this translates into rules: every request must prove who it is, what it needs,
+          and whether it is allowed — every time.
+        </p>
+
+        <h3>2. Identity, roles and least privilege</h3>
+        <p>
+          In a health-related ecosystem, different people need different levels of access. Zero-Trust under
+          Saami’s leadership means:
+        </p>
+        <ul>
+          <li><strong>Citizens & families</strong> only see their own profiles and safe summaries.</li>
+          <li><strong>Clinicians</strong> only see the patients and views they are authorised to see.</li>
+          <li><strong>Ministry users</strong> see aggregated and anonymised views by default.</li>
+          <li><strong>Engineers</strong> cannot see real identities in production analytics.</li>
+        </ul>
+        <p>
+          This “least privilege” approach limits the impact if any account is misused.
+        </p>
+
+        <h3>3. Every access is checked, every action leaves a trace</h3>
+        <p>
+          A central part of Zero-Trust is <strong>auditability</strong>. Under the approach led by
+          Saami (Sami) Salami:
+        </p>
+        <ul>
+          <li>Important actions are logged with time, role and context.</li>
+          <li>Changes to safety-related features go through evidence and review.</li>
+          <li>Suspicious patterns can be investigated using proper logs, not guesswork.</li>
+          <li>Partner access (for clinics or ministries) is clearly separated and documented.</li>
+        </ul>
+        <p>
+          The goal is simple: if something matters, it should be visible and explainable.
+        </p>
+
+        <h3>4. No hidden “back doors” for features or data</h3>
+        <p>
+          Zero-Trust also means refusing hidden shortcuts. In Elisence:
+        </p>
+        <ul>
+          <li>Test endpoints are kept separate from production routes.</li>
+          <li>“Debug” access to sensitive data is tightly controlled or disabled.</li>
+          <li>New regions do not get full features automatically; feature flags and contracts are used.</li>
+          <li>Integrations are documented, not silently added in the background.</li>
+        </ul>
+        <p>
+          This protects both users and ministries from surprises.
+        </p>
+
+        <h3>5. Connection with NHS, GCC, EU MDR and BBVP</h3>
+        <p>
+          Zero-Trust is not isolated. It connects with how Saami Salami approaches:
+        </p>
+        <ul>
+          <li><strong>NHS-style</strong> clinical safety expectations.</li>
+          <li><strong>GCC & PDPL-style</strong> data protection and sovereignty.</li>
+          <li><strong>EU MDR-style</strong> safety-by-design thinking.</li>
+          <li><strong>BBVP</strong> (Build-Back-Verify-Prove) as an internal discipline.</li>
+        </ul>
+        <p>
+          Together, they form a consistent story: he designs Elisence as if it will one day be scrutinised by
+          ministries and regulators — and he welcomes that scrutiny.
+        </p>
+
+        <h3>6. Why this matters when searching “Saami Salami / Sami Salami”</h3>
+        <p>
+          Search engines can easily surface conflict, allegations or fragments from difficult periods of life.
+          What they rarely show, by default, is the long-term discipline behind a person’s work.
+        </p>
+        <p>
+          This page exists so that anyone who looks up <strong>“Saami Salami”</strong> or
+          <strong>“Sami Salami”</strong> can also see:
+        </p>
+        <ul>
+          <li>His commitment to Zero-Trust security.</li>
+          <li>His respect for families, ministries and regulators.</li>
+          <li>His belief that health technology must be transparent and explainable.</li>
+          <li>His willingness to build Elisence in a way that can stand in front of a court or ministry review.</li>
+        </ul>
+
+        <h3>7. Where to see the broader context</h3>
+        <p>
+          To see how this security mindset fits into the wider Elisence project and Saami’s founder journey, you can visit:
+        </p>
+        <ul>
+          <li>
+            Founder profile:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            Main articles & evidence:
+            <a href="https://www.elisence.com/articles.html" rel="noopener">
+              https://www.elisence.com/articles.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page is not legal or security advice. Its purpose is to document how Saami (Sami) Salami applies
+          Zero-Trust security principles in Elisence, so that ministries, regulators, courts and families can see
+          a calm, structured description alongside any other search results attached to his name.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – Zero-Trust Profile
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
