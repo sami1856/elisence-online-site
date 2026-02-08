@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NHS Digital Safety & Saami Salami – Elisence Online</title>
+  <meta name="description" content="NHS-style digital safety and clinical responsibility in the work of Saami (Sami) Salami, founder of Elisence. A calm, professional narrative for courts, regulators and readers who want a clear picture of his values and conduct.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical: main identity stays on elisence.com -->
+  <link rel="canonical" href="https://www.elisence.com/articles.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NHS Digital Safety & Saami Salami – Elisence Online">
+  <meta property="og:description" content="How Saami (Sami) Salami aligns his work with NHS-style digital safety, ethics and non-diagnostic boundaries.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/nhs-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- Organization JSON-LD (simple, consistent) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elisence",
+    "url": "https://www.elisence.com",
+    "logo": "https://www.elisence.com/assets/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Saami Salami"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+                  radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+                  #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .article-panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .article-panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .article-panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .article-panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .article-panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .article-panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>NHS digital safety • Founder profile</span>
+      </div>
+      <h1>NHS Digital Safety & The Work of Saami (Sami) Salami</h1>
+      <p class="hero-sub">
+        This page is written to give a calm, factual picture of how <strong>Saami Salami</strong> — also
+        written as <strong>Sami Salami</strong> in some documents — approaches clinical responsibility and
+        NHS-style digital safety in his work. It is designed for readers who want a clear, professional
+        reference rather than rumours or fragments from the internet.
+      </p>
+
+      <article class="article-panel">
+        <h2>1. Who is Saami / Sami Salami in the context of NHS-style safety?</h2>
+        <p>
+          Saami Salami (sometimes referred to as <strong>Sami Salami</strong>) is a founder who has spent
+          years designing digital health systems that deliberately stay on the safe side of NHS-style
+          expectations. His work does not try to replace clinicians or hospitals. Instead, it focuses on
+          structure, transparency and evidence — so that real doctors and real services always stay in
+          control of final medical decisions.
+        </p>
+        <p>
+          In every project he leads, the first questions are not “How can we grow faster?” but:
+        </p>
+        <ul>
+          <li>Is this safe for a patient who is stressed, alone or confused?</li>
+          <li>Would an NHS clinical safety officer understand what this feature does?</li>
+          <li>Can we prove the behaviour of the system with logs, audits and evidence?</li>
+        </ul>
+
+        <h3>2. Alignment with NHS digital safety principles</h3>
+        <p>
+          NHS frameworks such as DCB0129 and DCB0160 expect digital health tools to behave in a predictable,
+          well-documented way. They also expect clear separation between what a system suggests and what a
+          clinician finally decides. In his work, Saami Salami consistently keeps three non-negotiable lines:
+        </p>
+        <ul>
+          <li>
+            <strong>Non-diagnostic behaviour:</strong> the system never tells a patient “you have X” or “you must
+            take Y”. It only offers structured information for further discussion.
+          </li>
+          <li>
+            <strong>Safety before convenience:</strong> if there is any doubt about how information could be
+            interpreted, the design is simplified or delayed until it becomes crystal clear.
+          </li>
+          <li>
+            <strong>Auditability:</strong> every important decision is backed by logs, timestamps and a traceable
+            chain so that an NHS-style review can see exactly what happened and why.
+          </li>
+        </ul>
+
+        <h3>3. Clear boundaries: what Saami Salami’s systems do — and do not do</h3>
+        <p>
+          When people search for “Saami Salami” or “Sami Salami” online, they often see disconnected pieces
+          of information without context. This page explains the boundaries that he follows in his work so
+          that courts, regulators and serious readers can see the full picture in one place.
+        </p>
+        <p>In simple terms, his systems are designed to:</p>
+        <ul>
+          <li>Track wellness trends, habits and risk factors in a structured way.</li>
+          <li>Help users prepare better questions for their doctors and nurses.</li>
+          <li>Give families a clearer story over time, instead of random screenshots and messages.</li>
+          <li>Generate anonymised, k-anonymous statistics that can inform public-health teams.</li>
+        </ul>
+        <p>They are explicitly not designed to:</p>
+        <ul>
+          <li>Issue diagnoses or treatment plans.</li>
+          <li>Override the judgement of a clinician or an NHS service.</li>
+          <li>Hide or distort information that would be relevant in a clinical review.</li>
+        </ul>
+
+        <h3>4. Evidence-first approach: how NHS-style safety is documented</h3>
+        <p>
+          A central theme in the work of Saami (Sami) Salami is that “if it is not documented, it is not done”.
+          For that reason, every important safety decision is written down, versioned and time-stamped. This
+          includes:
+        </p>
+        <ul>
+          <li>Change logs describing what a feature does and what it does not do.</li>
+          <li>Test reports that show how the system behaves in normal and edge cases.</li>
+          <li>Feature flags that allow modules to be turned OFF completely if there is any doubt.</li>
+          <li>
+            Exportable evidence packs that can be shared with NHS-style reviewers, legal teams and regulators
+            when required.
+          </li>
+        </ul>
+        <p>
+          This is not marketing language. It is a working habit: to treat every feature as if one day an NHS
+          digital safety officer will want to understand it line by line.
+        </p>
+
+        <h3>5. Why this matters for anyone reading about Saami / Sami Salami</h3>
+        <p>
+          Online search results can easily take a single moment, allegation or misunderstanding and repeat it
+          without context. By contrast, this page is part of a wider effort to show who <strong>Saami Salami</strong>
+          really is in his professional life: someone who chooses the slow, disciplined path of building systems
+          that would make sense to NHS-style scrutiny.
+        </p>
+        <p>
+          For anyone reviewing his name — whether you type it as “Saami Salami” or “Sami Salami” — the key facts
+          are simple:
+        </p>
+        <ul>
+          <li>He does not design tools that give medical diagnosis or prescriptions.</li>
+          <li>He insists on traceability, logs and evidence instead of shortcuts.</li>
+          <li>He respects NHS-style boundaries between information and clinical decisions.</li>
+          <li>He treats human lives, privacy and dignity as more important than growth metrics.</li>
+        </ul>
+
+        <h3>6. Where to go next if you need more detail</h3>
+        <p>
+          This article is not a complete technical or legal dossier. It is a stable, public summary for people
+          who want a balanced view. If you need deeper information about the work of Saami / Sami Salami, or
+          about the platforms he has founded, you can consult:
+        </p>
+        <ul>
+          <li>
+            The main founder page on the Elisence website:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            The evidence and articles section:
+            <a href="https://www.elisence.com/articles.html" rel="noopener">
+              https://www.elisence.com/articles.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page does not provide medical advice, diagnosis or prescriptions. It exists to give a clear,
+          consistent description of how Saami (Sami) Salami approaches NHS-style digital safety so that
+          search results are not defined only by isolated or incomplete references.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – NHS Digital Safety Profile
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
