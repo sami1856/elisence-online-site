@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zero-Trust & BBVP – How Saami (Sami) Salami Builds Safe Digital Health</title>
+  <meta name="description" content="A detailed look at how Saami (Sami) Salami applies Zero-Trust security and the BBVP (Build–Back–Verify–Prove) protocol when building Elisence. Written for people who want evidence, not rumours.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical: main identity stays on elisence.com -->
+  <link rel="canonical" href="https://www.elisence.com/articles.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zero-Trust & BBVP – How Saami (Sami) Salami Builds Safe Digital Health">
+  <meta property="og:description" content="Zero-Trust architecture and the BBVP protocol, as applied by Saami (Sami) Salami in Elisence – for ministries, regulators and families who need a clear picture beyond search noise.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/zero-trust-bbvp-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- Organization JSON-LD (simple, consistent) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Elisence",
+    "url": "https://www.elisence.com",
+    "logo": "https://www.elisence.com/assets/logo.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Saami Salami"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+                  radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+                  #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .article-panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .article-panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .article-panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .article-panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .article-panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .article-panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Zero-Trust & BBVP • Founder profile</span>
+      </div>
+      <h1>Zero-Trust Security & BBVP – How Saami (Sami) Salami Builds Elisence</h1>
+      <p class="hero-sub">
+        This article explains how <strong>Saami Salami</strong> — also written as <strong>Sami Salami</strong> —
+        uses a <strong>Zero-Trust</strong> mindset and the <strong>BBVP (Build–Back–Verify–Prove)</strong> protocol
+        when building Elisence. It is written for ministries, regulators, courts and families who want to see
+        calm, technical facts alongside any other search results for his name.
+      </p>
+
+      <article class="article-panel">
+        <h2>1. What “Zero-Trust” means in this context</h2>
+        <p>
+          “Zero-Trust” does not mean zero trust in people. It means that digital systems never blindly trust
+          a device, a user account or a network location just because it appears familiar. Every request has
+          to earn access, every time, with clear checks and limited permissions.
+        </p>
+        <p>
+          When <strong>Saami / Sami Salami</strong> applies Zero-Trust ideas to Elisence, it leads to practical
+          rules such as:
+        </p>
+        <ul>
+          <li>No direct database access from the public internet.</li>
+          <li>Role-based permissions so users only see what they truly need.</li>
+          <li>Short-lived tokens and keys instead of permanent “god” accounts.</li>
+          <li>Audit logs for sensitive actions, kept in write-once (WORM-style) formats.</li>
+        </ul>
+
+        <h3>2. The BBVP protocol: Build – Back – Verify – Prove</h3>
+        <p>
+          Over time, Saami / Sami Salami formalised his working style into a protocol called
+          <strong>BBVP: Build – Back – Verify – Prove</strong>. It exists to stop hype and to force real
+          evidence for every feature.
+        </p>
+        <p>
+          In simple terms:
+        </p>
+        <ul>
+          <li>
+            <strong>Build:</strong> write the code or create the configuration in a controlled environment,
+            with feature flags OFF by default.
+          </li>
+          <li>
+            <strong>Back:</strong> create backups, fallbacks and a clear rollback path before exposing
+            anything to real users.
+          </li>
+          <li>
+            <strong>Verify:</strong> run tests, manual checks and sanity reviews. If tests fail, the feature
+            is NOT “almost done”; it is NOT done.
+          </li>
+          <li>
+            <strong>Prove:</strong> capture evidence – logs, screenshots, test reports, hashes – so that
+            in the future, anyone can see what was done and when.
+          </li>
+        </ul>
+        <p>
+          This protocol is used not only for code, but also for documentation, APIs and even investor-facing
+          demos, to avoid exaggeration.
+        </p>
+
+        <h3>3. How Zero-Trust and BBVP protect real people</h3>
+        <p>
+          Behind every request to Elisence there might be a mother checking GLP-1 doses, a father tracking
+          his child’s asthma, or a ministry analyst looking at population trends. When Saami Salami makes
+          design decisions, the question is always: “what if this request is malicious, or simply wrong?”.
+        </p>
+        <p>
+          Combining Zero-Trust with BBVP leads to safeguards such as:
+        </p>
+        <ul>
+          <li>Minimal data returned in each API response.</li>
+          <li>Separation between personally identifiable information and analytics.</li>
+          <li>Strict limits on who can see raw health events vs. anonymised aggregates.</li>
+          <li>Systematic tests to prove that feature flags truly switch sensitive parts OFF.</li>
+        </ul>
+        <p>
+          These choices are not visible in short social media clips, but they matter for safety.
+        </p>
+
+        <h3>4. “Done” means 100% done, or not done at all</h3>
+        <p>
+          A central part of the BBVP protocol is the definition of “Done”. In the work led by Saami / Sami
+          Salami, a feature is only “Done” when:
+        </p>
+        <ul>
+          <li>The code is written and passes compile checks.</li>
+          <li>Automated tests exist for both ON and OFF states of the feature flag.</li>
+          <li>Security and privacy implications have been considered.</li>
+          <li>Evidence (test logs, hashes, notes) is stored in a way that can be shown later.</li>
+        </ul>
+        <p>
+          If any of these aspects are missing, the feature is considered <strong>not done</strong>, even if
+          it looks visually impressive in a demo.
+        </p>
+
+        <h3>5. Why this matters for courts, ministries and families</h3>
+        <p>
+          When someone searches for <strong>“Saami Salami”</strong> or <strong>“Sami Salami”</strong>, they
+          may find pages that focus on conflict or allegations, without showing how he actually works when
+          building systems that affect people’s health and data.
+        </p>
+        <p>
+          For courts, ministries or family members who need a fuller picture, it is important to understand:
+        </p>
+        <ul>
+          <li>He does not treat health data as a toy or a marketing asset.</li>
+          <li>He uses Zero-Trust principles to limit the impact of mistakes or attacks.</li>
+          <li>He uses BBVP to avoid “half-finished but advertised as complete” features.</li>
+          <li>He keeps evidence of what the system actually does at each stage.</li>
+        </ul>
+
+        <h3>6. Examples of BBVP in everyday Elisence work</h3>
+        <p>
+          Some concrete examples of BBVP in action in the Elisence context include:
+        </p>
+        <ul>
+          <li>
+            New chart types or analytics views being added with the feature flag OFF, fully tested, and only
+            then switched ON for specific roles.
+          </li>
+          <li>
+            Regulatory evidence export endpoints being tested with valid, invalid and missing tokens before
+            being exposed to any ministry use.
+          </li>
+          <li>
+            Women+ and family modules being wired with strict OFF=503 behaviour until compliance evidence
+            and safety gates are ready.
+          </li>
+        </ul>
+        <p>
+          In each case, Saami / Sami Salami insists that tests and evidence must exist before any public claim
+          is made about the feature.
+        </p>
+
+        <h3>7. Where to see more about his professional work</h3>
+        <p>
+          This article is part of a wider set of pages that present the professional, long-term work of
+          Saami (Sami) Salami beyond search fragments. For a more complete view, you can visit:
+        </p>
+        <ul>
+          <li>
+            Founder profile:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            Evidence and articles hub:
+            <a href="https://www.elisence.com/articles.html" rel="noopener">
+              https://www.elisence.com/articles.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page is not a legal document and does not replace formal security or regulatory reviews.
+          It records how Saami (Sami) Salami thinks about Zero-Trust and BBVP in his own work, so that future
+          readers – including ministries, regulators, courts and families – can see a structured, factual
+          description alongside any other material they may find online.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – Zero-Trust & BBVP Profile
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
