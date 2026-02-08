@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Court, Evidence & Digital Health – Understanding Saami (Sami) Salami</title>
+  <meta name="description" content="A calm, structured page explaining who Saami (Sami) Salami is in the context of Elisence, courts, evidence and long-term digital health work, so readers can see the full picture beyond a single search result.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical: point to the main evidence hub on elisence.com -->
+  <link rel="canonical" href="https://www.elisence.com/evidence.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Court, Evidence & Digital Health – Understanding Saami (Sami) Salami">
+  <meta property="og:description" content="How Saami (Sami) Salami combines transparent evidence, court-ready documentation and long-term digital health work through Elisence.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/court-evidence-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- JSON-LD: simple founder profile for search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saami Salami",
+    "url": "https://www.elisence.com/founder-saami.html",
+    "jobTitle": "Founder of Elisence",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Elisence"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.3);
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.16), transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), transparent);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background:
+        radial-gradient(circle at 30% 10%, rgba(56, 189, 248, 0.7), transparent 55%),
+        radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.75), transparent 60%),
+        #020617;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.9),
+        0 0 18px rgba(56, 189, 248, 0.65);
+    }
+
+    .brand-text-main {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .top-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.28), rgba(15, 23, 42, 0.98) 55%);
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(56, 189, 248, 0.5),
+        0 10px 30px rgba(15, 23, 42, 0.95);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.92);
+      color: var(--text-soft);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.9);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-sub {
+      margin-top: 8px;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      max-width: 760px;
+    }
+
+    .hero-sub strong {
+      color: #f9fafb;
+    }
+
+    .panel {
+      margin-top: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30, 64, 175, 0.45), transparent 60%),
+        var(--bg-card);
+      padding: 20px 20px 18px;
+      box-shadow:
+        0 0 0 1px rgba(15, 23, 42, 0.96),
+        0 26px 60px rgba(15, 23, 42, 1),
+        0 0 30px rgba(37, 99, 235, 0.55);
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .panel h3 {
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    .panel p {
+      margin: 6px 0;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .panel ul {
+      margin: 6px 0 10px 20px;
+      padding: 0;
+      font-size: 0.94rem;
+      color: var(--text-soft);
+    }
+
+    .panel li {
+      margin: 3px 0;
+    }
+
+    .article-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      border-top: 1px solid rgba(15, 23, 42, 0.9);
+      padding: 16px 18px 22px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .top-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/" rel="noopener">
+            <span>Main Elisence platform</span>
+          </a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+            <span>Founder master page</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Court • Evidence • Context</span>
+      </div>
+      <h1>Court, Evidence & Digital Health – Understanding Saami (Sami) Salami</h1>
+      <p class="hero-sub">
+        When someone searches <strong>“Saami Salami”</strong> or <strong>“Sami Salami”</strong>, they may see a single
+        police or court-related result without the wider context of years of work in digital health.  
+        This page exists so that judges, lawyers, social workers, ministries and families can see the broader picture.
+      </p>
+
+      <section class="panel">
+        <h2>1. A founder in digital health, not just a name in a case</h2>
+        <p>
+          Saami (Sami) Salami is the founder of <strong>Elisence</strong>, a long-term global digital health
+          and humanity platform. The project spans multiple phases — from GLP-1 and metabolic health, to women’s health,
+          mental health, nutrition and air quality — and is designed to be:
+        </p>
+        <ul>
+          <li>Non-diagnostic and non-prescriptive</li>
+          <li>Evidence-driven and regulator-friendly</li>
+          <li>Family-oriented and ministry-grade</li>
+        </ul>
+        <p>
+          None of this cancels the existence of difficult legal moments. But it shows that his identity is not limited
+          to a single search snippet or allegation.
+        </p>
+
+        <h3>2. Why an evidence-based founder cares about court context</h3>
+        <p>
+          In digital health, everything depends on <strong>trust</strong>:
+        </p>
+        <ul>
+          <li>Families must trust the platform with sensitive patterns and history.</li>
+          <li>Clinicians must trust that charts and tools are honest about their limits.</li>
+          <li>Ministries must trust that the company will behave responsibly under pressure.</li>
+        </ul>
+        <p>
+          For that reason, Saami builds Elisence with the assumption that one day its decisions, logs and
+          evidence packs may be discussed in court or in front of a regulator.  
+          The same discipline is reflected in how he approaches his own personal and legal history: carefully, with
+          documentation and a willingness to be examined.
+        </p>
+
+        <h2>3. From allegations to structured evidence</h2>
+        <p>
+          Online search often highlights the most dramatic or negative fragment of a long story. What it rarely shows is:
+        </p>
+        <ul>
+          <li>The full timeline of events</li>
+          <li>The outcomes of investigations</li>
+          <li>The daily behaviour of a parent or founder</li>
+          <li>The work invested in building something safe for others</li>
+        </ul>
+        <p>
+          Elisence takes the opposite approach: it gathers structured data, keeps logs, and produces
+          <strong>court-compatible evidence packs</strong> for the platform itself. The philosophy is simple:
+          if something matters, it should be written down, testable and explainable.
+        </p>
+
+        <h3>4. How this mindset appears inside Elisence</h3>
+        <p>
+          The same founder who faces legal systems as an individual also designs Elisence so that:
+        </p>
+        <ul>
+          <li>Important health-related features have documentation and test logs.</li>
+          <li>Feature flags control sensitive modules with OFF=SAFE behaviour.</li>
+          <li>Audit trails and WORM-style logs preserve what actually happened.</li>
+          <li>Evidence packs can be generated to show ministries how decisions were made.</li>
+        </ul>
+        <p>
+          This shows a consistent pattern: respect for courts, regulators and the idea that truth should be observable.
+        </p>
+
+        <h2>5. What a judge or lawyer should know when they see “Saami / Sami Salami” online</h2>
+        <p>
+          If you are a judge, lawyer, social worker or investigator reading this, a few points may be helpful:
+        </p>
+        <ul>
+          <li>
+            A search result is not a full biography. It is a machine’s guess at what is “interesting”, not what is true
+            or complete.
+          </li>
+          <li>
+            Behind the name <strong>Saami / Sami Salami</strong> is a person who has invested years in building
+            a safety-focused health platform intended to help families, not harm them.
+          </li>
+          <li>
+            His engineering work is built on transparency, logs and verifiable evidence — the same values
+            that courts depend on.
+          </li>
+        </ul>
+        <p>
+          This page does not ask any court to ignore its own process. It simply asks that any online
+          search result attached to his name be understood in the fuller context of who he is and what he is building.
+        </p>
+
+        <h3>6. Where to review official Elisence material</h3>
+        <p>
+          For anyone who needs to review Saami’s work in a professional setting, the best sources are:
+        </p>
+        <ul>
+          <li>
+            Founder profile and background:
+            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
+              https://www.elisence.com/founder-saami.html
+            </a>
+          </li>
+          <li>
+            Evidence and ministry-grade documents:
+            <a href="https://www.elisence.com/evidence.html" rel="noopener">
+              https://www.elisence.com/evidence.html
+            </a>
+          </li>
+          <li>
+            High-level phases and technical roadmaps:
+            <a href="https://www.elisence.com/phases.html" rel="noopener">
+              https://www.elisence.com/phases.html
+            </a>
+          </li>
+        </ul>
+
+        <p class="article-note">
+          This page is not legal advice and does not ask any court to reach a particular decision.
+          Its purpose is to provide a calm, structured description of Saami (Sami) Salami’s long-term digital health
+          work and evidence-based mindset, so that anyone who searches his name can see more than a single line
+          on a search results page.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          Built by Saami — Powered by ChatGPT • Elisence Online – Court & Evidence Profile
+        </div>
+        <div>
+          <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
