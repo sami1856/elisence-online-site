@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BBVP – Build-Back-Verify-Prove • Saami (Sami) Salami</title>
+  <meta name="description" content="How Saami (Sami) Salami applies the BBVP methodology — Build-Back-Verify-Prove — in Elisence to ensure transparency, safety, reliability and trust for ministries, families and regulators.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.elisence.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BBVP – Build-Back-Verify-Prove • Saami (Sami) Salami">
+  <meta property="og:description" content="A clear and transparent explanation of how Saami (Sami) Salami uses BBVP to build Elisence with ministry-grade discipline and full traceability.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.elisence.online/bbvp-saami-salami.html">
+  <meta property="og:site_name" content="Elisence Online">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Saami Salami",
+    "url": "https://www.elisence.com/founder-saami.html",
+    "jobTitle": "Founder of Elisence",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Elisence"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-deep: #020617;
+      --bg-card: rgba(15, 23, 42, 0.96);
+      --border-soft: rgba(148, 163, 184, 0.45);
+      --accent: #38bdf8;
+      --accent-strong: rgba(59, 130, 246, 0.7);
+      --text-main: #e5e7eb;
+      --text-soft: #cbd5f5;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.18),transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.16),transparent 55%),
+        var(--bg-deep);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+    .shell { min-height: 100vh; display: flex; flex-direction: column; }
+    header {
+      padding: 26px 18px 8px;
+      border-bottom: 1px solid rgba(15,23,42,0.9);
+      background: linear-gradient(to bottom, rgba(15,23,42,0.96), transparent);
+    }
+    .header-inner {
+      max-width: 1120px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .brand-mark {
+      width:34px; height:34px; border-radius:999px;
+      background: radial-gradient(circle at 30% 10%, rgba(56,189,248,0.7),transparent 55%),
+                  radial-gradient(circle at 70% 80%, rgba(59,130,246,0.75),transparent 60%),
+                  #020617;
+      border:1px solid rgba(148,163,184,0.6);
+      box-shadow:0 0 18px rgba(56,189,248,0.55);
+    }
+    .brand-text-main { font-weight:600; letter-spacing:0.08em; font-size:0.9rem; text-transform:uppercase; }
+    .brand-text-sub { font-size:0.8rem; color:var(--text-soft); }
+
+    .chip {
+      font-size:0.75rem; padding:4px 10px; border-radius:999px;
+      background: radial-gradient(circle at top, rgba(56,189,248,0.28), rgba(15,23,42,0.98) 55%);
+      border:1px solid rgba(148,163,184,0.7);
+      text-decoration:none; color:var(--text-soft);
+      box-shadow:0 0 12px rgba(56,189,248,0.5);
+    }
+
+    main { max-width:1120px; margin:0 auto; padding:26px 18px 40px; flex:1; }
+
+    .pill {
+      display:inline-flex; gap:6px; align-items:center;
+      padding:3px 10px; border-radius:999px;
+      border:1px solid rgba(148,163,184,0.6);
+      background:rgba(15,23,42,0.92);
+      color:var(--text-soft); font-size:0.75rem; letter-spacing:0.1em;
+      margin-bottom:10px; box-shadow:0 0 18px rgba(56,189,248,0.45);
+    }
+    .pill-dot {
+      width:7px; height:7px; border-radius:999px;
+      background:var(--accent);
+    }
+
+    h1 { font-size:1.9rem; margin:0; }
+    .hero-sub { margin-top:8px; max-width:760px; color:var(--text-soft); }
+
+    .panel {
+      margin-top:26px;
+      padding:20px 20px 18px;
+      border-radius:18px;
+      border:1px solid var(--border-soft);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.18),transparent 55%),
+        radial-gradient(circle at bottom right, rgba(30,64,175,0.45),transparent 60%),
+        var(--bg-card);
+      box-shadow:
+        0 0 0 1px rgba(15,23,42,1),
+        0 26px 60px rgba(15,23,42,1),
+        0 0 30px rgba(37,99,235,0.55);
+    }
+    .panel h2 { margin-top:0; font-size:1.2rem; }
+    .panel h3 { margin-top:18px; }
+    .panel p, .panel li { font-size:0.95rem; }
+    .panel ul { margin-left:20px; }
+
+    footer {
+      padding:18px; border-top:1px solid rgba(15,23,42,0.9);
+      color:var(--text-muted);
+      background:radial-gradient(circle at top, rgba(15,23,42,0.98), rgba(15,23,42,1));
+    }
+    .footer-inner {
+      max-width:1120px; margin:0 auto;
+      display:flex; justify-content:space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div>
+            <div class="brand-text-main">ELISENCE ONLINE</div>
+            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+          </div>
+        </div>
+
+        <div class="top-links">
+          <a class="chip" href="https://www.elisence.com/">Main Platform</a>
+          <a class="chip" href="https://www.elisence.com/founder-saami.html">Founder</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="pill"><span class="pill-dot"></span> <span>BBVP • Core Methodology</span></div>
+      <h1>BBVP — Build-Back-Verify-Prove  
+      <br>How Saami (Sami) Salami Builds Elisence Safely</h1>
+
+      <p class="hero-sub">
+        This page explains how <strong>Saami (Sami) Salami</strong> uses the
+        <strong>BBVP methodology — Build, Back, Verify, Prove</strong> in Elisence to maintain
+        transparency, trust, and safety for ministries, regulators, courts, clinical partners,
+        and families who search his name online.
+      </p>
+
+      <section class="panel">
+        <h2>1. What is BBVP?</h2>
+        <p>
+          BBVP is a disciplined engineering method that forces every feature to go through four
+          steps before it is considered real:
+        </p>
+        <ul>
+          <li><strong>Build</strong> — Create the feature cleanly in isolation.</li>
+          <li><strong>Back</strong> — Produce documentation, evidence packs, logs and safety notes.</li>
+          <li><strong>Verify</strong> — Test ON/OFF states, boundaries, failures, and cross-region behaviour.</li>
+          <li><strong>Prove</strong> — Provide traceable proofs (SHA-256 logs, WORM entries, test output).</li>
+        </ul>
+
+        <h3>Why Saami created this system</h3>
+        <p>
+          In the digital health world, shortcuts create long-term risks.  
+          <strong>Saami (Sami) Salami</strong> designed BBVP because families, ministries, and courts deserve to see
+          that the platform is built on real evidence — not marketing.
+        </p>
+
+        <h2>2. No “Done” until 100% verified</h2>
+        <p>
+          Under BBVP, a feature is NEVER considered “done” unless:
+        </p>
+        <ul>
+          <li>Feature flag exists</li>
+          <li>Feature flag OFF = safe behaviour (usually 503)</li>
+          <li>Feature flag ON = full functionality</li>
+          <li>Both states tested and logged</li>
+          <li>Evidence pack generated</li>
+        </ul>
+
+        <p>
+          This method protects real families and ensures integrity even under legal or regulatory scrutiny.
+        </p>
+
+        <h2>3. Why this matters for people searching “Saami Salami” or “Sami Salami”</h2>
+        <p>
+          Online search results often reduce a person’s life to a few negative lines.  
+          BBVP demonstrates the side of Saami / Sami Salami that rarely appears on search pages:
+        </p>
+        <ul>
+          <li>Structured engineering discipline</li>
+          <li>Ministry-grade compliance mindset</li>
+          <li>Long-term responsibility for real people</li>
+          <li>Transparent, testable proofs of work</li>
+        </ul>
+
+        <h2>4. How ministries and courts benefit from BBVP</h2>
+        <p>
+          BBVP gives decision-makers a reliable framework:
+        </p>
+        <ul>
+          <li>Clear audit trails</li>
+          <li>Consistent OFF-mode safety</li>
+          <li>Evidence for every release</li>
+          <li>Predictable behaviour across regions</li>
+        </ul>
+
+        <h2>5. Where to learn more</h2>
+        <ul>
+          <li><a href="https://www.elisence.com/founder-saami.html">Founder Master Page</a></li>
+          <li><a href="https://www.elisence.com/articles.html">Official Articles & Evidence</a></li>
+        </ul>
+
+        <p class="article-note">
+          This page does not provide medical advice.  
+          Its purpose is to show how Saami / Sami Salami builds Elisence using transparent, safety-first,
+          ministry-grade discipline — so search results reflect the full picture, not fragments.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>Built by Saami — Powered by ChatGPT • Elisence Online</div>
+        <a href="https://www.elisence.com/">elisence.com</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
