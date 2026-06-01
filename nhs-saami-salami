@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>NHS Digital Safety & Saami Salami – Elisence Online</title>
-  <meta name="description" content="NHS-style digital safety and clinical responsibility in the work of Saami (Sami) Salami, founder of Elisence. A calm, professional narrative for courts, regulators and readers who want a clear picture of his values and conduct.">
+  <title>NHS Digital Safety & Saami Salami Asl – Elisence Online</title>
+  <meta name="description" content="NHS-style digital safety and clinical responsibility in the work of Saami Salami Asl, founder of Elisence. A calm, professional narrative for courts, regulators and readers who want a clear picture of his values and conduct.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Canonical: main identity stays on elisence.com -->
   <link rel="canonical" href="https://www.elisence.com/articles.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="NHS Digital Safety & Saami Salami – Elisence Online">
-  <meta property="og:description" content="How Saami (Sami) Salami aligns his work with NHS-style digital safety, ethics and non-diagnostic boundaries.">
+  <meta property="og:title" content="NHS Digital Safety & Saami Salami Asl – Elisence Online">
+  <meta property="og:description" content="How Saami Salami Asl aligns his work with NHS-style digital safety, ethics and non-diagnostic boundaries.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.elisence.online/nhs-saami-salami.html">
   <meta property="og:site_name" content="Elisence Online">
@@ -24,9 +24,12 @@
     "name": "Elisence",
     "url": "https://www.elisence.com",
     "logo": "https://www.elisence.com/assets/logo.png",
-    "founder": {
+        "founder": {
       "@type": "Person",
-      "name": "Saami Salami"
+      "name": "Saami Salami Asl",
+      "jobTitle": "Founder of Elisence",
+      "url": "https://elisence.com/saami-salami.html",
+      "image": "https://elisence.com/assets/saami-founder.jpeg"
     }
   }
   </script>
@@ -280,14 +283,14 @@
           <div class="brand-mark"></div>
           <div>
             <div class="brand-text-main">ELISENCE ONLINE</div>
-            <div class="brand-text-sub">Articles on Saami / Sami Salami</div>
+            <div class="brand-text-sub">Articles on Saami Salami Asl</div>
           </div>
         </div>
         <div class="top-links">
           <a class="chip" href="https://www.elisence.com/" rel="noopener">
             <span>Main Elisence platform</span>
           </a>
-          <a class="chip" href="https://www.elisence.com/founder-saami.html" rel="noopener">
+          <a class="chip" href="https://elisence.com/saami-salami.html" rel="noopener">
             <span>Founder master page</span>
           </a>
         </div>
@@ -299,18 +302,16 @@
         <span class="pill-dot"></span>
         <span>NHS digital safety • Founder profile</span>
       </div>
-      <h1>NHS Digital Safety & The Work of Saami (Sami) Salami</h1>
+      <h1>NHS Digital Safety & The Work of Saami Salami Asl</h1>
       <p class="hero-sub">
-        This page is written to give a calm, factual picture of how <strong>Saami Salami</strong> — also
-        written as <strong>Sami Salami</strong> in some documents — approaches clinical responsibility and
-        NHS-style digital safety in his work. It is designed for readers who want a clear, professional
-        reference rather than rumours or fragments from the internet.
+        This page gives a calm, factual picture of how <strong>Saami Salami Asl</strong> approaches clinical responsibility and
+        NHS-style digital safety in his work — with emphasis on governance, evidence, privacy, and traceability.
       </p>
 
       <article class="article-panel">
-        <h2>1. Who is Saami / Sami Salami in the context of NHS-style safety?</h2>
+        <h2>1. Who is Saami Salami Asl in the context of NHS-style safety?</h2>
         <p>
-          Saami Salami (sometimes referred to as <strong>Sami Salami</strong>) is a founder who has spent
+          Saami Salami Asl is a founder who has spent
           years designing digital health systems that deliberately stay on the safe side of NHS-style
           expectations. His work does not try to replace clinicians or hospitals. Instead, it focuses on
           structure, transparency and evidence — so that real doctors and real services always stay in
@@ -329,7 +330,7 @@
         <p>
           NHS frameworks such as DCB0129 and DCB0160 expect digital health tools to behave in a predictable,
           well-documented way. They also expect clear separation between what a system suggests and what a
-          clinician finally decides. In his work, Saami Salami consistently keeps three non-negotiable lines:
+          clinician finally decides. In his work, Saami Salami Asl consistently keeps three non-negotiable lines:
         </p>
         <ul>
           <li>
@@ -346,10 +347,9 @@
           </li>
         </ul>
 
-        <h3>3. Clear boundaries: what Saami Salami’s systems do — and do not do</h3>
+        <h3>3. Clear boundaries: what Saami Salami Asl’s systems do — and do not do</h3>
         <p>
-          When people search for “Saami Salami” or “Sami Salami” online, they often see disconnected pieces
-          of information without context. This page explains the boundaries that he follows in his work so
+          This page explains the boundaries that he follows in his work so
           that courts, regulators and serious readers can see the full picture in one place.
         </p>
         <p>In simple terms, his systems are designed to:</p>
@@ -368,7 +368,7 @@
 
         <h3>4. Evidence-first approach: how NHS-style safety is documented</h3>
         <p>
-          A central theme in the work of Saami (Sami) Salami is that “if it is not documented, it is not done”.
+          A central theme in the work of Saami Salami Asl is that “if it is not documented, it is not done”.
           For that reason, every important safety decision is written down, versioned and time-stamped. This
           includes:
         </p>
@@ -386,16 +386,14 @@
           digital safety officer will want to understand it line by line.
         </p>
 
-        <h3>5. Why this matters for anyone reading about Saami / Sami Salami</h3>
+        <h3>5. Why this matters for anyone reading about Saami Salami Asl</h3>
         <p>
-          Online search results can easily take a single moment, allegation or misunderstanding and repeat it
-          without context. By contrast, this page is part of a wider effort to show who <strong>Saami Salami</strong>
-          really is in his professional life: someone who chooses the slow, disciplined path of building systems
+          This page is part of a wider effort to show who <strong>Saami Salami Asl</strong>
+          is in his professional life: someone who chooses the slow, disciplined path of building systems
           that would make sense to NHS-style scrutiny.
         </p>
         <p>
-          For anyone reviewing his name — whether you type it as “Saami Salami” or “Sami Salami” — the key facts
-          are simple:
+          The key facts are simple:
         </p>
         <ul>
           <li>He does not design tools that give medical diagnosis or prescriptions.</li>
@@ -407,14 +405,14 @@
         <h3>6. Where to go next if you need more detail</h3>
         <p>
           This article is not a complete technical or legal dossier. It is a stable, public summary for people
-          who want a balanced view. If you need deeper information about the work of Saami / Sami Salami, or
+          who want a balanced view. If you need deeper information about the work of Saami Salami Asl, or
           about the platforms he has founded, you can consult:
         </p>
         <ul>
           <li>
             The main founder page on the Elisence website:
-            <a href="https://www.elisence.com/founder-saami.html" rel="noopener">
-              https://www.elisence.com/founder-saami.html
+            <a href="https://elisence.com/saami-salami.html" rel="noopener">
+              https://elisence.com/saami-salami.html
             </a>
           </li>
           <li>
@@ -427,8 +425,7 @@
 
         <p class="article-note">
           This page does not provide medical advice, diagnosis or prescriptions. It exists to give a clear,
-          consistent description of how Saami (Sami) Salami approaches NHS-style digital safety so that
-          search results are not defined only by isolated or incomplete references.
+          consistent description of how Saami Salami Asl approaches NHS-style digital safety, governance, evidence, and traceability.
         </p>
       </article>
     </main>
@@ -436,7 +433,7 @@
     <footer>
       <div class="footer-inner">
         <div>
-          Built by Saami — Powered by ChatGPT • Elisence Online – NHS Digital Safety Profile
+          Built by Saami Salami Asl — Powered by ChatGPT • Elisence Online – NHS Digital Safety Profile
         </div>
         <div>
           <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
