@@ -22,13 +22,13 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Elisence",
-    "url": "https://www.elisence.com",
-    "logo": "https://www.elisence.com/assets/logo.png",
+    "url": "https://elisence.com",
+    "logo": "https://elisence.com/assets/logo.png",
         "founder": {
       "@type": "Person",
       "name": "Saami Salami Asl",
       "jobTitle": "Founder of Elisence",
-      "url": "https://elisence.com/saami-salami.html",
+      "url": "https://elisence.com/saami-salami-Asl.html",
       "image": "https://elisence.com/assets/saami-founder.jpeg"
     }
   }
@@ -290,7 +290,7 @@
           <a class="chip" href="https://www.elisence.com/" rel="noopener">
             <span>Main Elisence platform</span>
           </a>
-          <a class="chip" href="https://elisence.com/saami-salami.html" rel="noopener">
+          <a class="chip" href="https://elisence.com/saami-salami-Asl.html" rel="noopener">
             <span>Founder master page</span>
           </a>
         </div>
