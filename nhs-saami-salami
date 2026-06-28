@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="author" content="Elisence Research Team" />
   <title>NHS Digital Safety & Saami Salami Asl – Elisence Online</title>
-  <meta name="description" content="NHS-style digital safety and clinical responsibility in the work of Saami Salami Asl, founder of Elisence. A calm, professional narrative for courts, regulators and readers who want a clear picture of his values and conduct.">
+  <meta name="description" content="NHS-style digital safety and clinical responsibility in Elisence digital health. A calm, professional narrative for courts, regulators and readers.">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Canonical: main identity stays on elisence.com -->
@@ -11,7 +12,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="NHS Digital Safety & Saami Salami Asl – Elisence Online">
-  <meta property="og:description" content="How Saami Salami Asl aligns his work with NHS-style digital safety, ethics and non-diagnostic boundaries.">
+  <meta property="og:description" content="How Elisence aligns with NHS-style digital safety, ethics and non-diagnostic boundaries.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.elisence.online/nhs-saami-salami.html">
   <meta property="og:site_name" content="Elisence Online">
@@ -25,16 +26,21 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Elisence",
-    "url": "https://elisence.com",
-    "logo": "https://elisence.com/assets/logo.png",
-        "founder": {
-      "@type": "Person",
-      "name": "Saami Salami Asl",
-      "jobTitle": "Founder of Elisence",
-      "url": "https://elisence.com/saami-salami-Asl.html",
-      "image": "https://elisence.com/assets/saami-founder.jpeg"
+    "@type": "Article",
+    "headline": "NHS Digital Safety & Saami Salami Asl – Elisence Online",
+    "author": {
+      "@type": "Organization",
+      "name": "Elisence",
+      "url": "https://elisence.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Elisence",
+      "url": "https://elisence.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.elisence.online/nhs-saami-salami.html"
     }
   }
   </script>
@@ -288,7 +294,7 @@
           <div class="brand-mark"></div>
           <div>
             <div class="brand-text-main">ELISENCE ONLINE</div>
-            <div class="brand-text-sub">Articles on Saami Salami Asl</div>
+            <div class="brand-text-sub">Elisence Research Team · Elisence</div>
           </div>
         </div>
         <div class="top-links">
@@ -307,7 +313,7 @@
         <span class="pill-dot"></span>
         <span>NHS digital safety • Founder profile</span>
       </div>
-      <h1>NHS Digital Safety & The Work of Saami Salami Asl</h1>
+      <h1>NHS Digital Safety & Elisence Digital Health Research</h1>
       <p class="hero-sub">
         This page gives a calm, factual picture of how <strong>Saami Salami Asl</strong> approaches clinical responsibility and
         NHS-style digital safety in his work — with emphasis on governance, evidence, privacy, and traceability.
@@ -438,7 +444,7 @@
     <footer>
       <div class="footer-inner">
         <div>
-          Built by Saami Salami Asl — Powered by ChatGPT • Elisence Online – NHS Digital Safety Profile
+          Built by Elisence — Powered by ChatGPT • Elisence Online – NHS Digital Safety Profile
         </div>
         <div>
           <a href="https://www.elisence.com/" rel="noopener">elisence.com</a>
